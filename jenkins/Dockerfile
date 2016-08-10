@@ -10,7 +10,8 @@ USER jenkins
 COPY install-plugins.sh /tmp/install-plugins.sh
 USER root
 RUN chmod +x /tmp/install-plugins.sh
-RUN /tmp/install-plugins.sh maven-plugin git job-dsl chucknorris greenballs envinject gradle github view-job-filters copyartifact cloudbees-folder
+RUN /tmp/install-plugins.sh git job-dsl greenballs envinject gradle github view-job-filters
+#RUN /tmp/install-plugins.sh maven-plugin git job-dsl chucknorris greenballs envinject gradle github view-job-filters copyartifact cloudbees-folder
 COPY plugins.txt /tmp/plugins.txt
 RUN /usr/local/bin/plugins.sh /tmp/plugins.txt
 
