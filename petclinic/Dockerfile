@@ -38,7 +38,7 @@ RUN curl -fSL "$TOMCAT_TGZ_URL" -o tomcat.tar.gz && \
 
 # Build and deploy petclinic (forked with mysql config)
 #RUN git clone https://github.com/mrdima/spring-petclinic.git /home/spring-petclinic && \
-RUN git clone https://github.com/momerkic-abh/spring-petclinic.git /home/spring-petclinic && \
+RUN git clone https://github.com/mrdima/spring-petclinic.git /home/spring-petclinic && \
   cd /home/spring-petclinic && \
   git checkout mysql && \
   git reset --hard origin/mysql && \
